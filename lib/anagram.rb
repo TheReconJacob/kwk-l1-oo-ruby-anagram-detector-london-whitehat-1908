@@ -6,4 +6,7 @@ attr_accessor :anagram
     @name = word
   end
   
-  def match
+  def match(array)
+    array.select {|x| x.split("").sort == @name.split("").sort}
+  end
+end
